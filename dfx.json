@@ -1,0 +1,23 @@
+{
+  "canisters": {
+    "dca_backend": {
+      "candid": "src/dca_backend/dca_backend.did",
+      "package": "dca_backend",
+      "type": "rust"
+    },
+    "dca_frontend": {
+      "dependencies": ["dca_backend"],
+      "source": ["src/dca_frontend/dist"],
+      "type": "assets",
+      "workspace": "dca_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
